@@ -1,0 +1,140 @@
+[gd_scene load_steps=13 format=3 uid="uid://cesqhls0qh24m"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_xfspd"]
+[ext_resource type="Script" path="res://TextEdit.gd" id="2_epdnf"]
+
+[sub_resource type="Theme" id="Theme_wy5w2"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fc8gw"]
+
+[sub_resource type="Theme" id="Theme_cd0ie"]
+
+[sub_resource type="FontFile" id="FontFile_xgo7k"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/12/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/12/0 = Vector2(0, 0)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4sujy"]
+
+[sub_resource type="Texture2DRD" id="Texture2DRD_78vq1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_amp8s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wpqvs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_joki2"]
+
+[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_cyuoq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("shortcut_context")]
+process_mode = 3
+process_priority = 512
+process_physics_priority = 512
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+show_behind_parent = true
+top_level = true
+clip_children = 2
+y_sort_enabled = true
+texture_filter = 5
+texture_repeat = 2
+clip_contents = true
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+focus_mode = 1
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_wy5w2")
+script = ExtResource("1_xfspd")
+
+[node name="TextEdit" type="TextEdit" parent="Control" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 3
+process_priority = 612
+process_physics_priority = 612
+process_thread_group = 1
+process_thread_group_order = 612
+process_thread_messages = 3
+show_behind_parent = true
+top_level = true
+clip_children = 2
+y_sort_enabled = true
+texture_filter = 6
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_fc8gw")
+use_parent_material = true
+clip_contents = true
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+focus_neighbor_left = NodePath("..")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath("..")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("..")
+focus_previous = NodePath(".")
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_cd0ie")
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/current_line_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
+theme_override_colors/word_highlighted_color = Color(0, 0, 0, 1)
+theme_override_colors/search_result_color = Color(0, 0, 0, 1)
+theme_override_colors/search_result_border_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 0
+theme_override_constants/caret_width = 0
+theme_override_fonts/font = SubResource("FontFile_xgo7k")
+theme_override_font_sizes/font_size = 12
+theme_override_icons/tab = SubResource("NoiseTexture2D_4sujy")
+theme_override_icons/space = SubResource("Texture2DRD_78vq1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_amp8s")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wpqvs")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_joki2")
+wrap_mode = 1
+autowrap_mode = 2
+scroll_smooth = true
+scroll_past_end_of_file = true
+scroll_fit_content_height = true
+minimap_draw = true
+caret_type = 1
+caret_blink = true
+caret_draw_when_editable_disabled = true
+caret_mid_grapheme = true
+syntax_highlighter = SubResource("SyntaxHighlighter_cyuoq")
+highlight_all_occurrences = true
+highlight_current_line = true
+draw_control_chars = true
+draw_tabs = true
+draw_spaces = true
+text_direction = 3
+structured_text_bidi_override_options = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+script = ExtResource("2_epdnf")
